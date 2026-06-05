@@ -3,250 +3,191 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>parlaredisentirsi — Dott.ssa Angela D'Iorio</title>
-<meta name="description" content="parlaredisentirsi — studio di psicologia e psicoterapia della Dott.ssa Angela D'Iorio, a Genova e online. Uno spazio per parlare e per sentirsi.">
+<title>parlaredisentirsi — Angela D'Iorio</title>
+<meta name="description" content="parlaredisentirsi — Angela D'Iorio, psicologa e psicoterapeuta a Genova e online. Uno spazio per parlare e per sentirsi.">
 <meta name="theme-color" content="#557d97">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2215%22%20fill%3D%22%23557d97%22%2F%3E%3Cpath%20d%3D%22M32%2015C22.6%2015%2015%2020.5%2015%2027.3c0%203.9%202.5%207.4%206.3%209.6L19%2048l7.9-4c1.6.4%203.3.6%205.1.6%209.4%200%2017-5.5%2017-12.3S41.4%2015%2032%2015Z%22%20fill%3D%22%23f4f1ea%22%2F%3E%3Cpath%20d%3D%22M32%2031.5c-2-2.1-5-1.3-5%201.2%200%201.9%202.4%203.4%205%205.1%202.6-1.7%205-3.2%205-5.1%200-2.5-3-3.3-5-1.2Z%22%20fill%3D%22%23d4714e%22%2F%3E%3C%2Fsvg%3E">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..400&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..400&family=Karla:wght@400;500;600&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
 
 <style>
   :root{
-    --paper:#f4f1ea;        /* warm ivory */
-    --paper-2:#e6edf1;      /* soft blue panel */
-    --ink:#22323d;          /* deep slate-blue text */
+    --paper:#f4f1ea;
+    --paper-2:#e6edf1;
+    --ink:#22323d;
     --ink-soft:#54636d;
-    --blue:#557d97;         /* dusty blue — brand & structure (CALM) */
+    --blue:#557d97;
     --blue-deep:#3f6478;
     --blue-soft:#a6c1d2;
-    --accent:#cf6a47;       /* warm coral — ACTIONS ONLY (DO THIS) */
+    --accent:#cf6a47;        /* ACTIONS ONLY */
     --accent-deep:#b8552f;
     --line:#d4dde2;
     --shadow:rgba(34,50,61,.16);
-    --maxw:1140px;
+    --maxw:1080px;
   }
-
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  @media (prefers-reduced-motion:reduce){
-    html{scroll-behavior:auto}
-    *{animation:none!important;transition:none!important}
-  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
 
-  body{
-    background:var(--paper);
-    color:var(--ink);
-    font-family:"Newsreader",Georgia,serif;
-    font-size:1.075rem;
-    line-height:1.7;
-    font-weight:300;
-    -webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
-  }
-  body::before{
-    content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.5;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
-    mix-blend-mode:multiply;
-  }
+  body{background:var(--paper);color:var(--ink);font-family:"Newsreader",Georgia,serif;font-size:1.1rem;line-height:1.75;font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.5;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");mix-blend-mode:multiply}
 
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;z-index:2}
-
-  h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:400;line-height:1.1;letter-spacing:-.01em}
+  .narrow{max-width:640px}
+  h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:400;line-height:1.12;letter-spacing:-.01em}
   a{color:inherit;text-decoration:none}
-
-  .eyebrow{font-family:"Karla",sans-serif;font-weight:600;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--blue-deep)}
-  .num{font-family:"Karla",sans-serif;font-weight:600;font-size:.78rem;letter-spacing:.18em;color:var(--blue)}
-
-  /* highlight in headings = brand blue (decorative) */
   .hl{font-style:italic;color:var(--blue)}
+  .kicker{font-family:"Karla",sans-serif;font-weight:600;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--blue-deep)}
+  /* editor placeholders — easy to spot, easy to delete */
+  .ed{background:rgba(85,125,151,.12);border-radius:4px;padding:.05em .35em;font-style:italic;color:var(--blue-deep)}
 
-  /* ---------- scroll progress (decorative -> blue) ---------- */
   #progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--blue);z-index:60;transition:width .1s linear}
 
-  /* ---------- nav ---------- */
-  header.nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;
-    padding:16px clamp(20px,5vw,52px);transition:background .4s ease, box-shadow .4s ease, padding .4s ease}
+  /* nav */
+  header.nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:16px clamp(20px,5vw,52px);transition:background .4s,box-shadow .4s,padding .4s}
   header.nav.scrolled{background:rgba(244,241,234,.86);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line);padding-top:12px;padding-bottom:12px}
   .brand{display:flex;align-items:center;gap:10px;font-family:"Fraunces",serif;font-size:1.24rem;font-weight:500;letter-spacing:-.02em;color:var(--ink)}
   .brand .logo-mark{width:30px;height:30px;color:var(--blue);flex:none}
-  .brand b{font-weight:500}
-  .brand .s{color:var(--blue);font-weight:500}
-  .menu{display:flex;gap:30px;align-items:center;font-family:"Karla",sans-serif;font-size:.92rem;font-weight:500}
+  .brand .s{color:var(--blue)}
+  .menu{display:flex;gap:28px;align-items:center;font-family:"Karla",sans-serif;font-size:.92rem;font-weight:500}
   .menu a{position:relative;color:var(--ink-soft);transition:color .25s}
   .menu a::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--blue);transition:width .3s}
   .menu a:hover,.menu a.active{color:var(--ink)}
   .menu a.active::after,.menu a:hover::after{width:100%}
-  /* nav CTA = ACTION -> accent */
   .nav-cta{font-family:"Karla",sans-serif;font-weight:600;font-size:.9rem;background:var(--accent);color:#fff;border-radius:40px;padding:10px 20px;transition:all .25s}
-  .nav-cta:hover{background:var(--accent-deep);transform:translateY(-1px)}
+  .nav-cta:hover{background:var(--accent-deep)}
 
-  /* ---------- hero ---------- */
-  .hero{min-height:100svh;display:flex;align-items:center;padding:120px 0 60px;position:relative}
-  .hero .wrap{display:grid;grid-template-columns:1.25fr .9fr;gap:56px;align-items:center}
-  .hero-copy .eyebrow{display:block;margin-bottom:20px;opacity:0}
-  .hero h1{font-size:clamp(2.6rem,6.2vw,4.7rem);margin-bottom:22px}
-  .hero .lead{font-size:1.18rem;color:var(--ink-soft);max-width:48ch;margin-bottom:32px}
-  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
-  .btn{font-family:"Karla",sans-serif;font-weight:600;font-size:.96rem;padding:14px 28px;border-radius:44px;cursor:pointer;
-    transition:all .25s;display:inline-flex;align-items:center;gap:9px;border:1.5px solid transparent}
-  /* primary action -> accent ; secondary -> neutral ink */
+  /* hero */
+  .hero{min-height:100svh;display:flex;align-items:center;padding:120px 0 70px}
+  .hero .wrap{display:grid;grid-template-columns:1.2fr .85fr;gap:60px;align-items:center}
+  .hero .kicker{display:block;margin-bottom:22px;opacity:0}
+  .hero h1{font-size:clamp(3rem,8vw,5.6rem);margin-bottom:24px}
+  .hero .lead{font-size:1.22rem;color:var(--ink-soft);max-width:46ch;margin-bottom:34px}
+  .hero-actions{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+  .btn{font-family:"Karla",sans-serif;font-weight:600;font-size:.98rem;padding:15px 30px;border-radius:44px;cursor:pointer;transition:all .25s;display:inline-flex;align-items:center;gap:9px;border:1.5px solid transparent}
   .btn-primary{background:var(--accent);color:#fff}
-  .btn-primary:hover{background:var(--accent-deep);transform:translateY(-2px)}
-  .btn-ghost{border-color:var(--ink);color:var(--ink)}
-  .btn-ghost:hover{background:var(--ink);color:var(--paper)}
+  .btn-primary:hover{background:var(--accent-deep)}
+  .textlink{font-family:"Karla",sans-serif;font-weight:500;font-size:.98rem;color:var(--ink-soft);border-bottom:1px solid var(--line);padding-bottom:2px}
+  .textlink:hover{color:var(--ink);border-color:var(--ink)}
 
-  .portrait{position:relative;aspect-ratio:4/5;border-radius:160px 160px 22px 22px;overflow:hidden;
-    background:linear-gradient(160deg,var(--paper-2),#cfdde6);box-shadow:0 30px 60px -28px var(--shadow);
-    display:flex;align-items:center;justify-content:center;text-align:center}
+  .portrait{position:relative;aspect-ratio:4/5;border-radius:200px 200px 24px 24px;overflow:hidden;background:linear-gradient(160deg,var(--paper-2),#cfdde6);box-shadow:0 30px 60px -30px var(--shadow);display:flex;align-items:center;justify-content:center;text-align:center}
   .portrait::after{content:"";position:absolute;inset:0;border:1px solid rgba(255,255,255,.5);border-radius:inherit}
-  .portrait .ph{font-family:"Karla",sans-serif;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-deep);padding:0 26px}
-  .portrait svg{width:78px;height:78px;opacity:.55;margin-bottom:14px}
-  .blob{position:absolute;width:340px;height:340px;border-radius:50%;
-    background:radial-gradient(circle at 30% 30%,rgba(85,125,151,.22),transparent 70%);filter:blur(8px);right:-60px;top:-40px;z-index:-1}
+  .portrait .ph{font-family:"Karla",sans-serif;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-deep);padding:0 26px}
+  .portrait svg{width:74px;height:74px;opacity:.55;margin-bottom:14px}
 
-  /* ---------- sections ---------- */
-  section{padding:clamp(70px,11vw,128px) 0;position:relative}
-  .sec-head{margin-bottom:54px;max-width:60ch}
-  .sec-head .num{display:block;margin-bottom:14px}
-  .sec-head h2{font-size:clamp(2rem,4.6vw,3.1rem);margin-bottom:18px}
-  .sec-head p{color:var(--ink-soft);font-size:1.12rem;max-width:54ch}
+  /* generic */
+  section{padding:clamp(64px,10vw,110px) 0;position:relative}
   .divider{height:1px;background:var(--line);max-width:var(--maxw);margin:0 auto}
 
-  /* about */
-  #chi-sono .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:start}
-  .about-img{aspect-ratio:1/1;border-radius:24px;background:linear-gradient(150deg,#d3e0e8,var(--paper-2));
-    display:flex;align-items:center;justify-content:center;box-shadow:0 24px 48px -30px var(--shadow);position:sticky;top:110px}
-  .about-img .ph{font-family:"Karla",sans-serif;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-deep)}
-  .about-body p{margin-bottom:20px;color:var(--ink-soft)}
-  .about-body p strong{color:var(--ink);font-weight:500}
-  .tag-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
-  .tag{font-family:"Karla",sans-serif;font-size:.82rem;font-weight:500;background:var(--paper-2);border:1px solid var(--line);padding:7px 15px;border-radius:30px;color:var(--ink-soft)}
+  /* the letter (di me) — reads like a personal note */
+  .letter{font-size:1.2rem;line-height:1.9}
+  .letter .kicker{margin-bottom:26px;display:block}
+  .letter h2{font-size:clamp(1.9rem,4.4vw,2.7rem);margin-bottom:30px;max-width:18ch}
+  .letter p{margin-bottom:1.25em;color:var(--ink)}
+  .signature{font-family:"Caveat",cursive;font-weight:600;font-size:2.6rem;color:var(--blue);line-height:1;margin-top:.5em}
+  .cred{font-family:"Karla",sans-serif;font-size:.86rem;color:var(--ink-soft);letter-spacing:.03em;margin-top:10px}
 
-  /* quote band */
+  /* quote */
   .quoteband{background:var(--paper-2);text-align:center}
-  .quoteband blockquote{font-family:"Fraunces",serif;font-style:italic;font-weight:300;font-size:clamp(1.4rem,3.2vw,2rem);
-    line-height:1.4;max-width:30ch;margin:0 auto;color:var(--ink)}
-  .quoteband .mark{font-size:3rem;color:var(--blue-soft);line-height:0;display:block;margin-bottom:6px}
-  .quoteband cite{display:block;margin-top:22px;font-style:normal;font-family:"Karla",sans-serif;font-size:.84rem;letter-spacing:.06em;color:var(--blue-deep)}
+  .quoteband blockquote{font-family:"Fraunces",serif;font-style:italic;font-weight:300;font-size:clamp(1.4rem,3.2vw,2rem);line-height:1.45;max-width:28ch;margin:0 auto;color:var(--ink)}
+  .quoteband .kicker{display:block;margin-bottom:24px}
+  .quoteband cite{display:block;margin-top:22px;font-style:normal;font-family:"Karla",sans-serif;font-size:.84rem;letter-spacing:.05em;color:var(--blue-deep)}
 
-  /* approccio */
-  #approccio{background:var(--paper-2)}
-  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-  .card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:34px 30px;transition:transform .3s,box-shadow .3s}
-  .card:hover{transform:translateY(-6px);box-shadow:0 22px 40px -26px var(--shadow)}
-  .card .ic{width:46px;height:46px;border-radius:12px;background:rgba(85,125,151,.12);display:flex;align-items:center;justify-content:center;margin-bottom:20px;color:var(--blue-deep)}
-  .card h3{font-size:1.32rem;margin-bottom:10px}
-  .card p{font-size:1rem;color:var(--ink-soft)}
+  /* ambiti — quiet list, no badges/hover */
+  .ambiti h2{font-size:clamp(1.9rem,4.4vw,2.7rem);margin-bottom:14px}
+  .ambiti .intro{color:var(--ink-soft);margin-bottom:36px;max-width:52ch}
+  .ambiti-item{padding:24px 0;border-bottom:1px solid var(--line)}
+  .ambiti-item:first-of-type{border-top:1px solid var(--line)}
+  .ambiti-item h3{font-size:1.4rem;margin-bottom:4px}
+  .ambiti-item p{color:var(--ink-soft);font-size:1.06rem}
 
-  /* servizi */
-  .svc{border-top:1px solid var(--line)}
-  .svc-item{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:baseline;padding:30px 4px;border-bottom:1px solid var(--line);transition:padding-left .3s}
-  .svc-item:hover{padding-left:16px}
-  .svc-item .n{font-family:"Karla",sans-serif;font-weight:600;color:var(--blue);font-size:.95rem}
-  .svc-item h3{font-size:1.5rem}
-  .svc-item p{color:var(--ink-soft);font-size:1.02rem;margin-top:6px}
+  /* come funziona — understated steps */
+  #come{background:var(--paper-2)}
+  #come h2{font-size:clamp(1.9rem,4.4vw,2.7rem);margin-bottom:14px}
+  #come .intro{color:var(--ink-soft);margin-bottom:40px;max-width:52ch}
+  .flow-step{display:grid;grid-template-columns:auto 1fr;gap:22px;padding:22px 0;border-bottom:1px solid var(--line)}
+  .flow-step:last-child{border-bottom:0}
+  .flow-step .n{font-family:"Karla",sans-serif;font-weight:600;font-size:.85rem;color:var(--blue);border:1.5px solid var(--blue-soft);width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:none}
+  .flow-step h3{font-size:1.22rem;margin-bottom:4px}
+  .flow-step p{color:var(--ink-soft);font-size:1.04rem}
 
-  /* percorso (dark calm band) */
-  #percorso{background:var(--ink);color:var(--paper)}
-  #percorso .eyebrow{color:var(--blue-soft)}
-  #percorso .num{color:var(--blue-soft)}
-  #percorso .sec-head p{color:#c2cdd4}
-  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:step}
-  .step{position:relative;padding-top:30px}
-  .step::before{counter-increment:step;content:"0" counter(step);font-family:"Fraunces",serif;font-size:2.6rem;color:var(--blue-soft);display:block;margin-bottom:12px;line-height:1}
-  .step h3{font-size:1.22rem;margin-bottom:8px;color:var(--paper)}
-  .step p{font-size:.98rem;color:#c2cdd4}
-
-  /* info */
-  .info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-  .info{background:var(--paper-2);border:1px solid var(--line);border-radius:18px;padding:30px}
-  .info .ic{color:var(--blue-deep);margin-bottom:14px}
-  .info h3{font-size:1.18rem;margin-bottom:8px}
-  .info p{color:var(--ink-soft);font-size:1rem}
+  /* dove — plain blocks */
+  .pblocks{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
+  .pblock .ic{color:var(--blue-deep);margin-bottom:12px}
+  .pblock h3{font-size:1.2rem;margin-bottom:6px}
+  .pblock p{color:var(--ink-soft);font-size:1.04rem}
+  #dove h2{font-size:clamp(1.9rem,4.4vw,2.7rem);margin-bottom:36px}
 
   /* faq */
-  .faq details{border-bottom:1px solid var(--line);padding:6px 0}
-  .faq summary{cursor:pointer;list-style:none;padding:20px 0;font-family:"Fraunces",serif;font-size:1.28rem;display:flex;justify-content:space-between;align-items:center;gap:20px}
+  .faq h2{font-size:clamp(1.9rem,4.4vw,2.7rem);margin-bottom:18px}
+  .faq details{border-bottom:1px solid var(--line)}
+  .faq summary{cursor:pointer;list-style:none;padding:22px 0;font-family:"Fraunces",serif;font-size:1.28rem;display:flex;justify-content:space-between;align-items:center;gap:20px}
   .faq summary::-webkit-details-marker{display:none}
-  .faq summary .pm{font-family:"Karla";color:var(--blue);font-size:1.6rem;font-weight:400;transition:transform .3s;flex:none}
+  .faq summary .pm{font-family:"Karla";color:var(--blue);font-size:1.6rem;transition:transform .3s;flex:none}
   .faq details[open] summary .pm{transform:rotate(45deg)}
-  .faq details p{color:var(--ink-soft);padding:0 0 22px;max-width:64ch}
+  .faq details p{color:var(--ink-soft);padding:0 0 24px;max-width:62ch}
 
   /* contatti */
   #contatti{background:var(--paper-2)}
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
-  .contact-lead h2{font-size:clamp(2.1rem,5vw,3.4rem);margin-bottom:18px}
-  .contact-lead p{color:var(--ink-soft);max-width:42ch;margin-bottom:30px}
-  .channels{display:flex;flex-direction:column;gap:14px}
-  /* channels are clickable actions: neutral by default, accent on hover */
-  .channel{display:flex;align-items:center;gap:16px;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:18px 22px;transition:transform .25s,border-color .25s}
-  .channel:hover{transform:translateX(6px);border-color:var(--accent)}
-  .channel .ic{width:44px;height:44px;border-radius:12px;background:rgba(85,125,151,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-deep);flex:none}
-  .channel .lbl{font-family:"Karla",sans-serif;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-deep)}
-  .channel .val{font-size:1.08rem;color:var(--ink)}
+  .contact-lead h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:18px}
+  .contact-lead p{color:var(--ink-soft);max-width:40ch;margin-bottom:30px}
+  .channels{display:flex;flex-direction:column;gap:13px}
+  .channel{display:flex;align-items:center;gap:16px;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:17px 22px;transition:border-color .25s}
+  .channel:hover{border-color:var(--accent)}
+  .channel .ic{width:42px;height:42px;border-radius:11px;background:rgba(85,125,151,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-deep);flex:none}
+  .channel .lbl{font-family:"Karla",sans-serif;font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-deep)}
+  .channel .val{font-size:1.06rem;color:var(--ink)}
   .form-card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:34px}
-  .form-card label{display:block;font-family:"Karla",sans-serif;font-size:.82rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 7px}
+  .form-card label{display:block;font-family:"Karla",sans-serif;font-size:.8rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 7px}
   .form-card input,.form-card textarea{width:100%;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:13px 15px;font-family:"Newsreader",serif;font-size:1rem;color:var(--ink);margin-bottom:18px;resize:vertical}
   .form-card input:focus,.form-card textarea:focus{outline:none;border-color:var(--blue)}
   .form-card .btn-primary{width:100%;justify-content:center}
   .privacy-note{font-family:"Karla",sans-serif;font-size:.82rem;color:var(--blue-deep);margin-top:14px;text-align:center}
 
-  /* footer */
-  footer{padding:46px 0;text-align:center}
-  footer .brand{justify-content:center;font-size:1.32rem;margin-bottom:10px}
+  footer{padding:48px 0;text-align:center}
+  footer .brand{justify-content:center;font-size:1.3rem;margin-bottom:10px}
   footer p{font-family:"Karla",sans-serif;font-size:.84rem;color:var(--ink-soft);line-height:1.9}
-  footer .fine{margin-top:18px;color:var(--blue-deep);font-size:.78rem}
+  footer .fine{margin-top:16px;color:var(--blue-deep);font-size:.78rem}
 
-  /* reveal */
-  .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
   .reveal.in{opacity:1;transform:none}
 
-  /* ---------- mobile bottom action bar ---------- */
+  /* mobile bottom bar */
   .mobile-bar{display:none}
   @media (max-width:920px){
-    .mobile-bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:58;gap:10px;
-      padding:10px 14px calc(10px + env(safe-area-inset-bottom));
-      background:rgba(244,241,234,.92);backdrop-filter:blur(12px);border-top:1px solid var(--line)}
+    .mobile-bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:58;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(244,241,234,.92);backdrop-filter:blur(12px);border-top:1px solid var(--line)}
     .mobile-bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;min-height:52px;border-radius:40px;font-family:"Karla",sans-serif;font-weight:600;font-size:1rem}
     .mobile-bar .mb-primary{background:var(--accent);color:#fff}
     .mobile-bar .mb-ghost{background:var(--paper);border:1.5px solid var(--ink);color:var(--ink)}
     body{padding-bottom:80px}
   }
-
-  /* ---------- responsive (mobile-first) ---------- */
+  /* responsive */
   @media (max-width:920px){
     .wrap{padding:0 22px}
     section[id],[id]{scroll-margin-top:78px}
-    .hero{padding:104px 0 48px;min-height:auto}
-    .hero .wrap{grid-template-columns:1fr;gap:30px;text-align:center}
-    .hero-copy .eyebrow{margin-bottom:14px}
-    .hero h1{font-size:clamp(2.3rem,9vw,3.4rem)}
+    .hero{padding:104px 0 50px;min-height:auto}
+    .hero .wrap{grid-template-columns:1fr;gap:32px;text-align:center}
+    .hero .kicker{margin-bottom:14px}
+    .hero h1{font-size:clamp(2.6rem,12vw,4rem)}
     .hero .lead{margin:0 auto 28px}
     .hero-actions{justify-content:center}
-    .btn{padding:15px 26px;min-height:52px}
-    .portrait{order:-1;width:170px;height:170px;aspect-ratio:1/1;max-width:none;margin:0 auto;border-radius:50%}
-    .portrait .ph{font-size:.7rem}
+    .btn{min-height:52px}
+    .portrait{order:-1;width:180px;height:180px;aspect-ratio:1/1;margin:0 auto;border-radius:50%}
     .portrait svg{width:48px;height:48px;margin-bottom:8px}
-    .blob{width:230px;height:230px;right:-30px;top:0}
-    #chi-sono .wrap{grid-template-columns:1fr;gap:30px}
-    .about-img{position:static;max-width:100%;aspect-ratio:16/10}
-    .cards,.steps,.info-grid{grid-template-columns:1fr}
+    .pblocks{grid-template-columns:1fr;gap:26px}
     .contact-grid{grid-template-columns:1fr;gap:30px}
-    .menu,.nav-cta{display:none}      /* mobile: scroll + bottom bar instead */
-    .sec-head{margin-bottom:36px}
-    .channel{min-height:64px}
-    .faq summary{padding:22px 0}
+    .menu,.nav-cta{display:none}
+    .signature{font-size:2.3rem}
   }
   @media (max-width:560px){
-    body{font-size:1.05rem}
     .wrap{padding:0 18px}
     section{padding:56px 0}
-    .svc-item{padding:24px 2px;gap:16px}
-    .svc-item h3{font-size:1.3rem}
+    .letter,.hero .lead{font-size:1.12rem}
     .form-card{padding:26px 22px}
-    .sec-head h2{font-size:clamp(1.8rem,7.5vw,2.4rem)}
   }
 </style>
 </head>
@@ -263,27 +204,25 @@
     <span>parlaredi<span class="s">sentirsi</span></span>
   </a>
   <nav class="menu" id="menu">
-    <a href="#chi-sono">Chi sono</a>
-    <a href="#approccio">Approccio</a>
-    <a href="#servizi">Servizi</a>
-    <a href="#percorso">Il percorso</a>
-    <a href="#info">Dove ricevo</a>
+    <a href="#di-me">Di me</a>
+    <a href="#ambiti">Di cosa mi occupo</a>
+    <a href="#come">Come funziona</a>
+    <a href="#dove">Dove</a>
     <a href="#contatti">Contatti</a>
   </nav>
-  <a href="#contatti" class="nav-cta">Prenota un colloquio</a>
+  <a href="#contatti" class="nav-cta">Scrivimi</a>
 </header>
 
-<!-- ===================== HERO ===================== -->
+<!-- HERO -->
 <section class="hero" id="top">
-  <div class="blob"></div>
   <div class="wrap">
     <div class="hero-copy">
-      <span class="eyebrow" id="eyebrow">Dott.ssa Angela D'Iorio · Psicologa e Psicoterapeuta</span>
-      <h1>Dare voce a ciò che <span class="hl">senti</span> è già iniziare a stare meglio.</h1>
-      <p class="lead">Uno spazio riservato e accogliente, a Genova e online, dove affrontare ansia, momenti di blocco, relazioni difficili o semplicemente il bisogno di capirti meglio — con i tuoi tempi e senza giudizio.</p>
+      <span class="kicker" id="eyebrow">Psicologa e psicoterapeuta · Genova e online</span>
+      <h1>Mi chiamo <span class="hl">Angela</span>.</h1>
+      <p class="lead">Il mio lavoro è fare spazio a ciò che senti e aiutarti a trovarne le parole — nel mio studio a Genova o online, con i tuoi tempi e senza giudizio. <span class="ed">[Riscrivi questa frase con parole tue: è la prima cosa che si legge.]</span></p>
       <div class="hero-actions">
-        <a href="#contatti" class="btn btn-primary">Prenota un primo colloquio &nbsp;→</a>
-        <a href="#approccio" class="btn btn-ghost">Come lavoro</a>
+        <a href="#contatti" class="btn btn-primary">Scrivimi</a>
+        <a href="#di-me" class="textlink">Due parole su di me ↓</a>
       </div>
     </div>
     <div class="portrait">
@@ -294,33 +233,24 @@
 
 <div class="divider"></div>
 
-<!-- ===================== CHI SONO ===================== -->
-<section id="chi-sono">
-  <div class="wrap">
-    <div><div class="about-img"><span class="ph">Foto / studio</span></div></div>
-    <div class="about-body">
-      <div class="sec-head" style="margin-bottom:30px">
-        <span class="num">01 — Chi sono</span>
-        <h2>Uno spazio pensato <span class="hl">per te</span>.</h2>
-      </div>
-      <p>Forse è la prima volta che cerchi un aiuto psicologico, oppure senti che da solo/a non basta più. In entrambi i casi sei nel posto giusto: chiedere aiuto è un atto di coraggio, e il mio compito è rendere questo passo più semplice, accompagnandoti senza fretta.</p>
-      <p><strong>Sono Angela D'Iorio, psicologa e psicoterapeuta</strong> a orientamento orientamento sistemico-relazionale. Da oltre 3 anni affianco adulti e coppie nei momenti di difficoltà, aiutandoli a ritrovare equilibrio, parole e direzione. <em>[Sostituisci con la tua formazione reale, l'orientamento teorico e gli anni di esperienza.]</em></p>
-      <p>Da questa idea nasce <em>parlaredisentirsi</em>: trovare le parole per ciò che proviamo è il primo passo per riconoscerlo, attraversarlo e, a volte, trasformarlo.</p>
-      <div class="tag-row">
-        <span class="tag">Iscr. Albo Psicologi n. ___</span>
-        <span class="tag">Orientamento sistemico-relazionale</span>
-        <span class="tag">Adulti</span>
-        <span class="tag">Coppie</span>
-        <span class="tag">Genova &amp; online</span>
-      </div>
-    </div>
+<!-- DI ME — la lettera -->
+<section id="di-me">
+  <div class="wrap narrow letter reveal">
+    <span class="kicker">Due parole</span>
+    <h2>Non so cosa ti abbia portato qui.</h2>
+    <p>Forse è la prima volta che pensi di rivolgerti a qualcuno, forse ci giri intorno da tempo. In ogni caso, il fatto che tu stia leggendo è già un inizio.</p>
+    <p>Credo che gran parte della fatica, quando stiamo male, nasca dal non riuscire a dare un nome a ciò che proviamo. Il mio lavoro comincia proprio da lì: fare spazio, ascoltare davvero, e cercare insieme le parole giuste — le tue, non le mie.</p>
+    <p><span class="ed">[Qui racconta perché fai questo lavoro: cosa ti ha portata a diventare psicoterapeuta, in cosa credi. Bastano due o tre frasi sincere — è la parte che le persone leggono con più attenzione.]</span></p>
+    <p>Non lavoro con protocolli uguali per tutti, perché diversa è ogni persona che ho davanti. <span class="ed">[Aggiungi il tuo orientamento e come lavori, con parole tue.]</span></p>
+    <div class="signature">Angela</div>
+    <p class="cred">Dott.ssa Angela D'Iorio · Iscr. Albo degli Psicologi n. ___ · Orientamento ___</p>
   </div>
 </section>
 
-<!-- ===================== QUOTE BAND ===================== -->
+<!-- QUOTE -->
 <section class="quoteband">
   <div class="wrap reveal">
-    <span class="mark">&ldquo;</span>
+    <span class="kicker">Una frase a cui tengo</span>
     <blockquote>È straordinaria l'idea che tutto ciò che sembra negativo possa, domani, da un punto di vista più sapiente, scoprirsi un valore.</blockquote>
     <cite>Cesare Pavese — Il mestiere di vivere</cite>
   </div>
@@ -328,96 +258,53 @@
 
 <div class="divider"></div>
 
-<!-- ===================== APPROCCIO ===================== -->
-<section id="approccio">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="num">02 — Il mio approccio</span>
-      <h2>Come lavoro insieme a te</h2>
-      <p>Tre principi che guidano ogni percorso. Personalizza questi testi con il tuo metodo.</p>
+<!-- AMBITI -->
+<section id="ambiti">
+  <div class="wrap narrow ambiti">
+    <div class="reveal">
+      <h2>Di cosa mi occupo</h2>
+      <p class="intro">Alcune delle ragioni per cui le persone mi scrivono. <span class="ed">[Tieni solo gli ambiti che tratti davvero e descrivili a parole tue.]</span></p>
     </div>
-    <div class="cards">
-      <div class="card reveal">
-        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-        <h3>Ascolto autentico</h3>
-        <p>Essere ascoltati davvero, senza fretta e senza giudizio, è già parte della cura. Qui c'è spazio per tutto ciò che provi.</p>
-      </div>
-      <div class="card reveal">
-        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg></div>
-        <h3>Percorso su misura</h3>
-        <p>Nessun protocollo identico per tutti: costruiamo insieme un percorso che rispetti i tuoi tempi e i tuoi obiettivi.</p>
-      </div>
-      <div class="card reveal">
-        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg></div>
-        <h3>Riservatezza</h3>
-        <p>Tutto ciò che condividi è protetto dal segreto professionale. Lo studio è uno spazio sicuro e discreto.</p>
-      </div>
+    <div class="ambiti-item reveal"><h3>Ansia, panico e stress</h3><p>Quando la preoccupazione non si placa, il corpo è in allarme e la mente non trova pace.</p></div>
+    <div class="ambiti-item reveal"><h3>Tristezza e calo dell'umore</h3><p>Senso di vuoto, poca energia, la fatica di trovare un senso alle giornate.</p></div>
+    <div class="ambiti-item reveal"><h3>Relazioni e coppia</h3><p>Conflitti che si ripetono, distanze che pesano, momenti di crisi e di cambiamento.</p></div>
+    <div class="ambiti-item reveal"><h3>Autostima e crescita personale</h3><p>Ritrovare fiducia, capire cosa desideri, dare una direzione alle tue scelte.</p></div>
+    <div class="ambiti-item reveal"><h3>Lutti, separazioni e cambiamenti</h3><p>Attraversare perdite e passaggi di vita con qualcuno accanto.</p></div>
+  </div>
+</section>
+
+<!-- COME FUNZIONA -->
+<section id="come">
+  <div class="wrap narrow">
+    <div class="reveal">
+      <h2>Come funziona</h2>
+      <p class="intro">Sapere cosa aspettarsi rende tutto un po' più semplice. Ecco come iniziamo.</p>
     </div>
+    <div class="flow-step reveal"><span class="n">1</span><div><h3>Mi scrivi</h3><p>Via WhatsApp, e-mail o Telegram. Ti rispondo io, di persona, per trovare un primo momento per parlarci.</p></div></div>
+    <div class="flow-step reveal"><span class="n">2</span><div><h3>Ci conosciamo</h3><p>Un primo colloquio per capire cosa ti porta qui e se posso esserti utile. Senza impegno.</p></div></div>
+    <div class="flow-step reveal"><span class="n">3</span><div><h3>Iniziamo</h3><p>Decidiamo insieme tempi e modalità, in studio a Genova oppure online.</p></div></div>
+    <div class="flow-step reveal"><span class="n">4</span><div><h3>Andiamo avanti coi tuoi tempi</h3><p>Nessuna fretta: procediamo passo dopo passo, verificando ciò che cambia.</p></div></div>
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- ===================== SERVIZI ===================== -->
-<section id="servizi">
+<!-- DOVE -->
+<section id="dove">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="num">03 — Aree di intervento</span>
-      <h2>In cosa posso aiutarti</h2>
-      <p>Sostituisci con le aree che tratti davvero. Di seguito alcuni esempi comuni.</p>
-    </div>
-    <div class="svc">
-      <div class="svc-item reveal"><span class="n">A</span><div><h3>Ansia, panico e stress</h3><p>Quando la preoccupazione non si placa, il corpo è in allarme e la mente non trova pace.</p></div></div>
-      <div class="svc-item reveal"><span class="n">B</span><div><h3>Tristezza e calo dell'umore</h3><p>Senso di vuoto, mancanza di energia o di slancio, difficoltà a trovare un senso.</p></div></div>
-      <div class="svc-item reveal"><span class="n">C</span><div><h3>Relazioni e coppia</h3><p>Conflitti che si ripetono, distanze che pesano, momenti di crisi e di cambiamento.</p></div></div>
-      <div class="svc-item reveal"><span class="n">D</span><div><h3>Autostima e crescita personale</h3><p>Ritrovare fiducia in te, chiarire ciò che desideri, dare direzione alle tue scelte.</p></div></div>
-      <div class="svc-item reveal"><span class="n">E</span><div><h3>Lutti, separazioni e cambiamenti</h3><p>Attraversare perdite e transizioni con uno spazio di sostegno accanto a te.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== PERCORSO ===================== -->
-<section id="percorso">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="num">04 — Come funziona</span>
-      <h2>Come si svolge un percorso</h2>
-      <p>Sapere cosa aspettarsi aiuta a sentirsi più a proprio agio fin dal primo contatto.</p>
-    </div>
-    <div class="steps">
-      <div class="step reveal"><h3>Il primo contatto</h3><p>Mi scrivi via e-mail, WhatsApp o Telegram. Ti rispondo io, personalmente, per fissare un primo incontro.</p></div>
-      <div class="step reveal"><h3>Il colloquio conoscitivo</h3><p>Ci conosciamo, esploriamo insieme ciò che ti porta qui e capiamo se posso esserti utile. Senza impegno.</p></div>
-      <div class="step reveal"><h3>Il percorso</h3><p>Definiamo obiettivi, frequenza e modalità. In studio a Genova oppure comodamente online.</p></div>
-      <div class="step reveal"><h3>Insieme nel tempo</h3><p>Procediamo con i tuoi tempi, verificando passo dopo passo i cambiamenti che senti.</p></div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- ===================== INFO ===================== -->
-<section id="info">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="num">05 — Dove ricevo</span>
-      <h2>Informazioni pratiche</h2>
-      <p>Verifica e completa questi dati (indirizzo esatto, orari, tariffe).</p>
-    </div>
-    <div class="info-grid">
-      <div class="info reveal">
+    <div class="reveal"><h2>Dove ci vediamo</h2></div>
+    <div class="pblocks">
+      <div class="pblock reveal">
         <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-        <h3>In studio</h3>
-        <p>Genova — centro<br>[Indirizzo completo qui]</p>
+        <h3>In studio</h3><p>Genova, centro.<br><span class="ed">[Indirizzo qui]</span></p>
       </div>
-      <div class="info reveal">
+      <div class="pblock reveal">
         <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></div>
-        <h3>Online</h3>
-        <p>Sedute in videochiamata, ovunque tu sia, con la stessa cura e riservatezza.</p>
+        <h3>Online</h3><p>In videochiamata, ovunque tu sia, con la stessa cura.</p>
       </div>
-      <div class="info reveal">
+      <div class="pblock reveal">
         <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
-        <h3>Orari &amp; tariffe</h3>
-        <p>[Giorni e fasce orarie]<br>[Tariffa seduta / primo colloquio]</p>
+        <h3>Quando e quanto</h3><p><span class="ed">[Giorni e orari]<br>[Tariffa della seduta]</span></p>
       </div>
     </div>
   </div>
@@ -425,55 +312,40 @@
 
 <div class="divider"></div>
 
-<!-- ===================== FAQ ===================== -->
+<!-- FAQ -->
 <section id="faq">
-  <div class="wrap" style="max-width:840px">
-    <div class="sec-head reveal" style="margin-bottom:30px">
-      <span class="num">06 — Domande frequenti</span>
-      <h2>Prima di iniziare</h2>
-    </div>
-    <div class="faq reveal">
-      <details>
-        <summary>Qual è la differenza tra psicologo e psicoterapeuta? <span class="pm">+</span></summary>
-        <p>Lo psicologo si occupa di sostegno, valutazione e prevenzione del disagio. Lo psicoterapeuta, oltre alla laurea, ha una specializzazione che lo abilita a curare i disturbi psicologici attraverso un percorso più strutturato. <em>[Adatta in base al tuo profilo.]</em></p>
-      </details>
-      <details>
-        <summary>Quanto dura una seduta? <span class="pm">+</span></summary>
-        <p>In genere una seduta dura circa 50 minuti. All'inizio ci si vede di solito una volta a settimana; la frequenza si adatta poi alle tue esigenze. <em>[Modifica con i tuoi tempi.]</em></p>
-      </details>
-      <details>
-        <summary>Le sedute online funzionano quanto quelle in studio? <span class="pm">+</span></summary>
-        <p>Sì: svolta in un ambiente tranquillo e riservato, la terapia online offre la stessa qualità di ascolto e di relazione. È utile soprattutto se hai poco tempo o sei distante dallo studio.</p>
-      </details>
-      <details>
-        <summary>Tutto ciò che dico resta riservato? <span class="pm">+</span></summary>
-        <p>Sì. Tutto ciò che condividi è coperto dal segreto professionale e dal codice deontologico: nulla esce da questa stanza.</p>
-      </details>
+  <div class="wrap narrow faq">
+    <div class="reveal"><h2>Qualche domanda</h2></div>
+    <div class="reveal">
+      <details><summary>Che differenza c'è tra psicologo e psicoterapeuta? <span class="pm">+</span></summary>
+        <p>Lo psicologo si occupa di sostegno, valutazione e prevenzione del disagio. Lo psicoterapeuta ha in più una specializzazione che lo abilita a curare i disturbi psicologici con un percorso più strutturato. <span class="ed">[Adatta al tuo profilo.]</span></p></details>
+      <details><summary>Quanto dura una seduta? <span class="pm">+</span></summary>
+        <p>Di solito circa 50 minuti. All'inizio ci si vede in genere una volta a settimana, poi la frequenza si adatta a te. <span class="ed">[Modifica con i tuoi tempi.]</span></p></details>
+      <details><summary>Le sedute online funzionano? <span class="pm">+</span></summary>
+        <p>Sì: in un ambiente tranquillo e riservato offrono la stessa qualità di ascolto e di relazione. Sono comode soprattutto se hai poco tempo o sei lontano dallo studio.</p></details>
+      <details><summary>Quello che dico resta tra noi? <span class="pm">+</span></summary>
+        <p>Sì, sempre. Tutto è coperto dal segreto professionale: nulla esce da quella stanza.</p></details>
     </div>
   </div>
 </section>
 
-<!-- ===================== CONTATTI ===================== -->
+<!-- CONTATTI -->
 <section id="contatti">
   <div class="wrap">
     <div class="contact-grid">
       <div class="contact-lead reveal">
-        <span class="num" style="margin-bottom:14px;display:block">07 — Contatti</span>
-        <h2>Facciamo il primo passo</h2>
-        <p>Il primo passo è il più semplice: scrivimi due righe su ciò che ti porta qui. Ti risponderò personalmente per fissare un primo colloquio conoscitivo, senza impegno.</p>
+        <h2>Il primo passo</h2>
+        <p>Il modo più semplice per cominciare è scrivermi: bastano due righe su ciò che ti porta qui. Ti rispondo io, di persona.</p>
         <div class="channels">
-          <a class="channel" href="mailto:nome@tuodominio.it">
-            <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
-            <span><span class="lbl">E-mail</span><br><span class="val">nome@tuodominio.it</span></span>
-          </a>
           <a class="channel" href="https://wa.me/39XXXXXXXXXX" target="_blank" rel="noopener">
             <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.2-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg></span>
-            <span><span class="lbl">WhatsApp</span><br><span class="val">+39 ___ ___ ____</span></span>
-          </a>
+            <span><span class="lbl">WhatsApp</span><br><span class="val">+39 ___ ___ ____</span></span></a>
+          <a class="channel" href="mailto:nome@tuodominio.it">
+            <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+            <span><span class="lbl">E-mail</span><br><span class="val">nome@tuodominio.it</span></span></a>
           <a class="channel" href="https://t.me/tuo_username" target="_blank" rel="noopener">
             <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m22 3-9 9M22 3 15 21l-4-8-8-4z"/></svg></span>
-            <span><span class="lbl">Telegram</span><br><span class="val">@tuo_username</span></span>
-          </a>
+            <span><span class="lbl">Telegram</span><br><span class="val">@tuo_username</span></span></a>
         </div>
       </div>
       <div class="form-card reveal">
@@ -484,24 +356,19 @@
           <input type="email" id="email" name="email" placeholder="La tua e-mail" required>
           <label for="msg">Messaggio</label>
           <textarea id="msg" name="msg" rows="4" placeholder="Scrivimi due righe…" required></textarea>
-          <button type="submit" class="btn btn-primary">Invia il messaggio</button>
-          <p class="privacy-note">I tuoi dati restano riservati e non vengono condivisi.</p>
+          <button type="submit" class="btn btn-primary">Invia</button>
+          <p class="privacy-note">Ciò che scrivi resta riservato e non viene condiviso.</p>
         </form>
       </div>
     </div>
   </div>
 </section>
 
-<!-- fixed contact bar, mobile only -->
 <div class="mobile-bar">
   <a class="mb-primary" href="https://wa.me/39XXXXXXXXXX" target="_blank" rel="noopener" aria-label="Scrivi su WhatsApp">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.2-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg>
-    WhatsApp
-  </a>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.2-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg> WhatsApp</a>
   <a class="mb-ghost" href="mailto:nome@tuodominio.it" aria-label="Scrivi una e-mail">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
-    E-mail
-  </a>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> E-mail</a>
 </div>
 
 <footer>
@@ -513,64 +380,30 @@
       </svg>
       <span>parlaredi<span class="s">sentirsi</span></span>
     </a>
-    <p>Dott.ssa Angela D'Iorio — Psicologa &amp; Psicoterapeuta · Genova e online</p>
-    <p class="fine">© <span id="year"></span> · P.IVA ___ · Iscr. Albo n. ___ · Informativa privacy</p>
+    <p>Angela D'Iorio — Psicologa e psicoterapeuta · Genova e online</p>
+    <p class="fine">© <span id="year"></span> · P.IVA ___ · Iscr. Albo n. ___ · Privacy</p>
   </div>
 </footer>
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+  const nav=document.getElementById('nav'), progress=document.getElementById('progress');
+  function onScroll(){const y=window.scrollY;nav.classList.toggle('scrolled',y>40);const h=document.documentElement.scrollHeight-window.innerHeight;progress.style.width=(h>0?(y/h)*100:0)+'%';}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
 
-  // nav background + progress bar
-  const nav = document.getElementById('nav');
-  const progress = document.getElementById('progress');
-  function onScroll(){
-    const y = window.scrollY;
-    nav.classList.toggle('scrolled', y > 40);
-    const h = document.documentElement.scrollHeight - window.innerHeight;
-    progress.style.width = (h>0 ? (y/h)*100 : 0) + '%';
-  }
-  window.addEventListener('scroll', onScroll, {passive:true});
-  onScroll();
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  requestAnimationFrame(()=>{const eb=document.getElementById('eyebrow');if(eb){eb.style.transition='opacity 1s ease .2s';eb.style.opacity=1;}});
 
-  // reveal on scroll
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, {threshold:0.12});
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-  requestAnimationFrame(() => { const eb=document.getElementById('eyebrow'); if(eb){eb.style.transition='opacity 1s ease .2s';eb.style.opacity=1;} });
+  const links=[...document.querySelectorAll('.menu a')];
+  const map=links.map(l=>({l,sec:document.querySelector(l.getAttribute('href'))})).filter(x=>x.sec);
+  const spy=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.remove('active'));const m=map.find(x=>x.sec===e.target);if(m)m.l.classList.add('active');}});},{rootMargin:'-45% 0px -50% 0px'});
+  map.forEach(x=>spy.observe(x.sec));
 
-  // active section in nav (desktop)
-  const links = [...document.querySelectorAll('.menu a')];
-  const map = links.map(l => ({l, sec: document.querySelector(l.getAttribute('href'))})).filter(x=>x.sec);
-  const spy = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if(e.isIntersecting){
-        links.forEach(l=>l.classList.remove('active'));
-        const m = map.find(x=>x.sec===e.target);
-        if(m) m.l.classList.add('active');
-      }
-    });
-  }, {rootMargin:'-45% 0px -50% 0px'});
-  map.forEach(x => spy.observe(x.sec));
+  const mbar=document.querySelector('.mobile-bar'), contatti=document.getElementById('contatti');
+  if(mbar&&contatti){mbar.style.transition='transform .35s ease';new IntersectionObserver((es)=>{es.forEach(e=>{mbar.style.transform=e.isIntersecting?'translateY(120%)':'translateY(0)';});},{threshold:0.25}).observe(contatti);}
 
-  // hide mobile contact bar when contact section is on screen
-  const mbar = document.querySelector('.mobile-bar');
-  const contatti = document.getElementById('contatti');
-  if(mbar && contatti){
-    mbar.style.transition = 'transform .35s ease';
-    new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ mbar.style.transform = e.isIntersecting ? 'translateY(120%)' : 'translateY(0)'; });
-    }, {threshold:0.25}).observe(contatti);
-  }
-
-  // contact form -> opens mail client (static site, no backend)
-  document.getElementById('contact-form').addEventListener('submit', function(ev){
-    ev.preventDefault();
-    const n = encodeURIComponent(this.nome.value);
-    const m = encodeURIComponent(this.msg.value + '\n\n— ' + this.nome.value + ' (' + this.email.value + ')');
-    window.location.href = 'mailto:nome@tuodominio.it?subject=Richiesta%20di%20contatto%20da%20' + n + '&body=' + m;
-  });
+  document.getElementById('contact-form').addEventListener('submit',function(ev){ev.preventDefault();const n=encodeURIComponent(this.nome.value);const m=encodeURIComponent(this.msg.value+'\n\n— '+this.nome.value+' ('+this.email.value+')');window.location.href='mailto:nome@tuodominio.it?subject=Richiesta%20di%20contatto%20da%20'+n+'&body='+m;});
 </script>
 </body>
 </html>
