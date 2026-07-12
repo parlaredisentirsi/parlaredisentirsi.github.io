@@ -415,6 +415,18 @@
   map.forEach(x=>spy.observe(x.sec));
 
   document.getElementById('contact-form').addEventListener('submit',function(ev){ev.preventDefault();const n=encodeURIComponent(this.nome.value);const m=encodeURIComponent(this.msg.value+'\n\n— '+this.nome.value+' ('+this.email.value+')');window.location.href='mailto:nome@tuodominio.it?subject=Richiesta%20di%20contatto%20da%20'+n+'&body='+m;});
+
+  // Rimuove l'ancora dall'URL dopo lo scroll
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', function () {
+    const hash = this.getAttribute('href');
+    if (hash.length > 1) {
+      setTimeout(() => {
+        history.replaceState(null, "", window.location.pathname + window.location.search);
+      }, 500);
+    }
+  });
+});
 </script>
 
 </body>
