@@ -40,6 +40,7 @@
   h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:400;line-height:1.12;letter-spacing:-.01em}
   a{color:inherit;text-decoration:none}
   .hl{font-style:italic;color:var(--blue)}
+  .nowrap{white-space:nowrap;}
   .kicker{font-family:"Karla",sans-serif;font-weight:600;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--blue-deep)}
   /* editor placeholders — easy to spot, easy to delete */
   .ed{background:rgba(85,125,151,.12);border-radius:4px;padding:.05em .35em;font-style:italic;color:var(--blue-deep)}
@@ -73,11 +74,12 @@
   .textlink{font-family:"Karla",sans-serif;font-weight:500;font-size:.98rem;color:var(--ink-soft);border-bottom:1px solid var(--line);padding-bottom:2px}
   .textlink:hover{color:var(--ink);border-color:var(--ink)}
 
-  /* changed only this shape */
+  /* portrait */
   .portrait{
     position:relative;
-    aspect-ratio:4/5;
-    border-radius:200px;
+    width:min(100%, 420px);
+    aspect-ratio:1/1;
+    border-radius:50%;
     overflow:hidden;
     background:linear-gradient(160deg,var(--paper-2),#cfdde6);
     box-shadow:0 30px 60px -30px var(--shadow);
@@ -85,6 +87,7 @@
     align-items:center;
     justify-content:center;
     text-align:center;
+    justify-self:center;
   }
   .portrait::after{content:"";position:absolute;inset:0;border:1px solid rgba(255,255,255,.5);border-radius:inherit}
   .portrait .ph{font-family:"Karla",sans-serif;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-deep);padding:0 26px}
@@ -230,7 +233,7 @@
   <div class="wrap">
     <div class="hero-copy">
       <span class="kicker" id="eyebrow">Psicologa · Genova</span>
-      <h1>Dott.ssa <span class="hl">Angela D'Iorio</span></h1>
+      <h1>Dott.ssa <span class="hl nowrap">Angela D'Iorio</span></h1>
       <p class="lead">Il mio lavoro è fare spazio a ciò che senti e aiutarti a trovarne le parole — nel mio studio a Genova, con i tuoi tempi e senza giudizio.</p>
       <div class="hero-actions">
         <a href="#contatti" class="btn btn-primary">Scrivimi</a>
@@ -249,7 +252,7 @@
 <section id="di-me">
   <div class="wrap narrow letter reveal">
     <h2>Non so cosa ti abbia portato qui.</h2>
-    <p>Forse è la prima volta che pensi di rivolgerti a qualcuno,
+    <p>Forse è la prima volta che pensi di rivolgerti a qualcuno,</p>
   </div>
 </section>
 
