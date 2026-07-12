@@ -197,15 +197,6 @@
   .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
   .reveal.in{opacity:1;transform:none}
 
-  /* mobile bottom bar */
-  .mobile-bar{display:none}
-  @media (max-width:920px){
-    .mobile-bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:58;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(244,241,234,.92);backdrop-filter:blur(12px);border-top:1px solid var(--line)}
-    .mobile-bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;min-height:52px;border-radius:40px;font-family:"Karla",sans-serif;font-weight:600;font-size:1rem}
-    .mobile-bar .mb-primary{background:var(--accent);color:#fff}
-    .mobile-bar .mb-ghost{background:var(--paper);border:1.5px solid var(--ink);color:var(--ink)}
-    body{padding-bottom:80px}
-  }
   /* responsive */
   @media (max-width:920px){
     .wrap{padding:0 22px}
@@ -394,11 +385,6 @@
   </div>
 </section>
 
-<div class="mobile-bar">
-  <a class="mb-ghost" href="mailto:nome@tuodominio.it" aria-label="Scrivi una e-mail">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> E-mail</a>
-</div>
-
 <footer>
   <div class="wrap">
     <a href="#top" class="brand" style="display:inline-flex">
@@ -427,9 +413,6 @@
   const map=links.map(l=>({l,sec:document.querySelector(l.getAttribute('href'))})).filter(x=>x.sec);
   const spy=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.remove('active'));const m=map.find(x=>x.sec===e.target);if(m)m.l.classList.add('active');}});},{rootMargin:'-45% 0px -50% 0px'});
   map.forEach(x=>spy.observe(x.sec));
-
-  const mbar=document.querySelector('.mobile-bar'), contatti=document.getElementById('contatti');
-  if(mbar&&contatti){mbar.style.transition='transform .35s ease';new IntersectionObserver((es)=>{es.forEach(e=>{mbar.style.transform=e.isIntersecting?'translateY(120%)':'translateY(0)';});},{threshold:0.25}).observe(contatti);}
 
   document.getElementById('contact-form').addEventListener('submit',function(ev){ev.preventDefault();const n=encodeURIComponent(this.nome.value);const m=encodeURIComponent(this.msg.value+'\n\n— '+this.nome.value+' ('+this.email.value+')');window.location.href='mailto:nome@tuodominio.it?subject=Richiesta%20di%20contatto%20da%20'+n+'&body='+m;});
 </script>
