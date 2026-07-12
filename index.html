@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="it">
 <head>
 <meta charset="UTF-8">
@@ -40,7 +41,6 @@
   h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:400;line-height:1.12;letter-spacing:-.01em}
   a{color:inherit;text-decoration:none}
   .hl{font-style:italic;color:var(--blue)}
-  .nowrap{white-space:nowrap;}
   .kicker{font-family:"Karla",sans-serif;font-weight:600;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--blue-deep)}
   /* editor placeholders — easy to spot, easy to delete */
   .ed{background:rgba(85,125,151,.12);border-radius:4px;padding:.05em .35em;font-style:italic;color:var(--blue-deep)}
@@ -63,21 +63,22 @@
 
   /* hero */
   .hero{min-height:100svh;display:flex;align-items:center;padding:120px 0 70px}
-  .hero .wrap{display:grid;grid-template-columns:1.2fr .85fr;gap:60px;align-items:center}
+  .hero .wrap{display:grid;grid-template-columns:1fr;gap:34px;align-items:center;justify-items:center;text-align:center}
+  .hero-copy{max-width:780px}
   .hero .kicker{display:block;margin-bottom:22px;opacity:0}
   .hero h1{font-size:clamp(2.4rem,6vw,4rem);margin-bottom:24px}
-  .hero .lead{font-size:1.22rem;color:var(--ink-soft);max-width:46ch;margin-bottom:34px}
-  .hero-actions{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+  .hero .lead{font-size:1.22rem;color:var(--ink-soft);max-width:46ch;margin:0 auto 34px}
+  .hero-actions{display:flex;gap:24px;align-items:center;flex-wrap:wrap;justify-content:center}
   .btn{font-family:"Karla",sans-serif;font-weight:600;font-size:.98rem;padding:15px 30px;border-radius:44px;cursor:pointer;transition:all .25s;display:inline-flex;align-items:center;gap:9px;border:1.5px solid transparent}
   .btn-primary{background:var(--accent);color:#fff}
   .btn-primary:hover{background:var(--accent-deep)}
   .textlink{font-family:"Karla",sans-serif;font-weight:500;font-size:.98rem;color:var(--ink-soft);border-bottom:1px solid var(--line);padding-bottom:2px}
   .textlink:hover{color:var(--ink);border-color:var(--ink)}
 
-  /* portrait */
+  /* changed only this shape */
   .portrait{
     position:relative;
-    width:min(100%, 420px);
+    width:min(340px,72vw);
     aspect-ratio:1/1;
     border-radius:50%;
     overflow:hidden;
@@ -87,11 +88,11 @@
     align-items:center;
     justify-content:center;
     text-align:center;
-    justify-self:center;
   }
   .portrait::after{content:"";position:absolute;inset:0;border:1px solid rgba(255,255,255,.5);border-radius:inherit}
   .portrait .ph{font-family:"Karla",sans-serif;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-deep);padding:0 26px}
   .portrait svg{width:74px;height:74px;opacity:.55;margin-bottom:14px}
+  .portrait img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
 
   /* generic */
   section{padding:clamp(64px,10vw,110px) 0;position:relative}
@@ -191,7 +192,7 @@
     .hero .lead{margin:0 auto 28px}
     .hero-actions{justify-content:center}
     .btn{min-height:52px}
-    .portrait{order:-1;width:180px;height:180px;aspect-ratio:1/1;margin:0 auto;border-radius:28px}
+    .portrait{order:-1;width:180px;height:180px;aspect-ratio:1/1;margin:0 auto;border-radius:50%}
     .portrait svg{width:48px;height:48px;margin-bottom:8px}
     .pblocks{grid-template-columns:1fr;gap:26px}
     .contact-grid{grid-template-columns:1fr;gap:30px}
@@ -205,6 +206,7 @@
     .form-card{padding:26px 22px}
   }
 </style>
+
 </head>
 <body>
 
@@ -229,37 +231,37 @@
 </header>
 
 <!-- HERO -->
+
 <section class="hero" id="top">
   <div class="wrap">
     <div class="portrait">
       <img src="/images/foto.jpg" alt="Dott.ssa Angela D'Iorio, psicologa" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
     </div>
-    </div>
-  <div class="wrap">
     <div class="hero-copy">
       <span class="kicker" id="eyebrow">Psicologa · Genova</span>
-      <h1>Dott.ssa <span class="hl nowrap">Angela D'Iorio</span></h1>
+      <h1>Dott.ssa <span class="hl">Angela D'Iorio</span></h1>
       <p class="lead">Il mio lavoro è fare spazio a ciò che senti e aiutarti a trovarne le parole — nel mio studio a Genova, con i tuoi tempi e senza giudizio.</p>
       <div class="hero-actions">
         <a href="#contatti" class="btn btn-primary">Scrivimi</a>
         <a href="#servizi-offerti" class="textlink">Servizi offerti ↓</a>
       </div>
     </div>
-    
   </div>
 </section>
 
 <div class="divider"></div>
 
 <!-- DI ME — la lettera -->
+
 <section id="di-me">
   <div class="wrap narrow letter reveal">
     <h2>Non so cosa ti abbia portato qui.</h2>
-    <p>Forse è la prima volta che pensi di rivolgerti a qualcuno,</p>
+    <p>Forse è la prima volta che pensi di rivolgerti a qualcuno,
   </div>
 </section>
 
 <!-- QUOTE -->
+
 <section class="quoteband">
   <div class="wrap reveal">
     <span class="kicker">Una frase a cui tengo</span>
@@ -271,6 +273,7 @@
 <div class="divider"></div>
 
 <!-- SERVIZI OFFERTI -->
+
 <section id="servizi-offerti">
   <div class="wrap narrow ambiti">
     <div class="reveal">
@@ -284,6 +287,7 @@
 </section>
 
 <!-- COME FUNZIONA -->
+
 <section id="come">
   <div class="wrap narrow">
     <div class="reveal">
@@ -300,6 +304,7 @@
 <div class="divider"></div>
 
 <!-- DOVE -->
+
 <section id="dove">
   <div class="wrap">
     <div class="reveal"><h2>Dove ci vediamo</h2></div>
@@ -319,6 +324,7 @@
 <div class="divider"></div>
 
 <!-- FAQ -->
+
 <section id="faq">
   <div class="wrap narrow faq">
     <div class="reveal"><h2>Qualche domanda</h2></div>
@@ -332,6 +338,7 @@
 </section>
 
 <!-- CONTATTI -->
+
 <section id="contatti">
   <div class="wrap">
     <div class="contact-grid">
@@ -401,5 +408,6 @@
 
   document.getElementById('contact-form').addEventListener('submit',function(ev){ev.preventDefault();const n=encodeURIComponent(this.nome.value);const m=encodeURIComponent(this.msg.value+'\n\n— '+this.nome.value+' ('+this.email.value+')');window.location.href='mailto:nome@tuodominio.it?subject=Richiesta%20di%20contatto%20da%20'+n+'&body='+m;});
 </script>
+
 </body>
 </html>
