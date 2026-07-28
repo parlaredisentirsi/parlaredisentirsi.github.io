@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="it">
 <head>
 <meta charset="UTF-8">
@@ -145,6 +144,38 @@
   .ambiti-item h3{font-size:1.4rem;margin-bottom:4px}
   .ambiti-item p{color:var(--ink-soft);font-size:1.06rem}
 
+  /* ============================================================
+     SERVIZI OFFERTI — schede con tariffe
+     (unico blocco aggiunto: usa solo i token già esistenti)
+     ============================================================ */
+  #servizi-offerti h2{font-size:clamp(1.9rem,4.4vw,2.7rem);margin-bottom:14px}
+  #servizi-offerti .intro{color:var(--ink-soft);margin-bottom:38px;max-width:52ch}
+
+  .tariffe{display:grid;grid-template-columns:1fr;gap:22px;align-items:stretch}
+  @media (min-width:921px){ .tariffe{grid-template-columns:repeat(3,1fr)} }
+
+  .tariffa{
+    display:flex;flex-direction:column;
+    background:var(--paper-2);border:1px solid var(--line);border-radius:20px;
+    padding:30px 26px 26px;
+    transition:border-color .25s,transform .35s,box-shadow .35s;
+  }
+  .tariffa:hover{border-color:var(--blue-soft);transform:translateY(-3px);box-shadow:0 26px 46px -32px var(--shadow)}
+  .tariffa h3{font-size:1.3rem;margin-bottom:10px}
+  .tariffa .desc{color:var(--ink-soft);font-size:1.02rem;line-height:1.7}
+
+  .tariffa .prezzo{margin-top:auto;padding-top:24px;display:flex;align-items:baseline;gap:5px;font-family:"Fraunces",serif;color:var(--blue)}
+  .tariffa .valuta{font-size:1.2rem}
+  .tariffa .cifra{font-size:2.6rem;line-height:1;letter-spacing:-.02em}
+  .tariffa .unita{font-family:"Karla",sans-serif;font-size:.82rem;color:var(--ink-soft);margin-left:7px}
+
+  .tariffa .ridotta{margin-top:20px;padding-top:16px;border-top:1px dashed var(--blue-soft);display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  .tariffa .ridotta .lbl{font-family:"Karla",sans-serif;font-weight:600;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-deep)}
+  .tariffa .ridotta .cifra-min{font-family:"Fraunces",serif;font-size:1.5rem;line-height:1;color:var(--blue-deep)}
+  .tariffa .ridotta .nota{flex-basis:100%;font-family:"Karla",sans-serif;font-size:.83rem;line-height:1.5;color:var(--ink-soft);margin-top:2px}
+
+  .tariffe-coda{margin-top:32px;padding-top:20px;border-top:1px solid var(--line);color:var(--ink-soft);font-size:1.02rem}
+
   /* come funziona — understated steps */
   #come{background:var(--paper-2)}
   #come h2{font-size:clamp(1.9rem,4.4vw,2.7rem);margin-bottom:14px}
@@ -220,6 +251,8 @@
     section{padding:56px 0}
     .letter,.hero .lead{font-size:1.12rem}
     .form-card{padding:26px 22px}
+    .tariffa{padding:26px 22px 24px}
+    .tariffa .cifra{font-size:2.3rem}
   }
 </style>
 
@@ -280,14 +313,53 @@
 <!-- SERVIZI OFFERTI -->
 
 <section id="servizi-offerti">
-  <div class="wrap narrow ambiti">
+  <div class="wrap">
     <div class="reveal">
       <h2>Servizi offerti</h2>
+      <p class="intro">Mi occupo di adulti, bambini, adolescenti, giovani adulti, coppie, terza età.</p>
     </div>
-    <div class="ambiti-item reveal"><p>Mi occupo di adulti, bambini, adolescenti, giovani adulti, coppie, terza età.</p></div>
-    <div class="ambiti-item reveal"><h3>Colloqui individuali</h3></div>
-    <div class="ambiti-item reveal"><h3>Colloqui di coppia</h3></div>
-    <div class="ambiti-item reveal"><h3>Colloqui familiari</h3></div>
+
+    <div class="tariffe">
+
+      <article class="tariffa reveal">
+        <h3>Colloqui individuali</h3>
+        <p class="desc">Uno spazio tuo, per attraversare un momento difficile o capire meglio cosa ti sta succedendo.</p>
+        <p class="prezzo">
+          <span class="valuta">€</span><span class="cifra">50</span>
+          <span class="unita">a colloquio</span>
+        </p>
+        <div class="ridotta">
+          <span class="lbl">20–30 anni</span>
+          <span class="cifra-min">35 €</span>
+          <span class="nota">Tariffa dedicata ai giovani adulti.</span>
+        </div>
+      </article>
+
+      <article class="tariffa reveal">
+        <h3>Colloqui di coppia</h3>
+        <p class="desc">Un incontro in cui al centro non c'è il singolo, ma quello che accade fra due persone.</p>
+        <p class="prezzo">
+          <span class="valuta">€</span><span class="cifra">70</span>
+          <span class="unita">a colloquio</span>
+        </p>
+      </article>
+
+      <article class="tariffa reveal">
+        <h3>Colloqui familiari</h3>
+        <p class="desc">Un incontro che coinvolge più membri della famiglia, quando la difficoltà riguarda tutti.</p>
+        <p class="prezzo">
+          <span class="valuta">€</span><span class="cifra">100</span>
+          <span class="unita">a colloquio</span>
+        </p>
+      </article>
+
+    </div>
+
+    <p class="tariffe-coda reveal">
+      Ogni colloquio dura circa 50 minuti e si svolge su appuntamento.
+      Il primo incontro serve a conoscerci: <a href="#contatti" class="textlink">scrivimi</a> per fissarlo.
+    </p>
+
   </div>
 </section>
 
