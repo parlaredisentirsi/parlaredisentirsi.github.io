@@ -166,10 +166,18 @@
   .tariffa .cifra{font-size:2.6rem;line-height:1;letter-spacing:-.02em}
   .tariffa .unita{font-family:"Karla",sans-serif;font-size:.82rem;color:var(--ink-soft);margin-left:7px}
 
-  .tariffa .ridotta{margin-top:20px;padding-top:16px;border-top:1px dashed var(--blue-soft);display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap}
-  .tariffa .ridotta .lbl{font-family:"Karla",sans-serif;font-weight:600;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-deep)}
-  .tariffa .ridotta .cifra-min{font-family:"Fraunces",serif;font-size:1.5rem;line-height:1;color:var(--blue-deep)}
-  .tariffa .ridotta .nota{flex-basis:100%;font-family:"Karla",sans-serif;font-size:.83rem;line-height:1.5;color:var(--ink-soft);margin-top:2px}
+  /* fascia tariffa giovani adulti */
+  .tariffa .ridotta{
+    margin:24px -26px -26px;              /* sborda fino ai lati della scheda */
+    padding:18px 26px 20px;
+    background:rgba(85,125,151,.12);
+    border-top:1px solid var(--blue-soft);
+    border-radius:0 0 19px 19px;          /* 20px del bordo meno 1px */
+    display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  }
+  .tariffa .ridotta .lbl{font-family:"Karla",sans-serif;font-weight:600;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-deep)}
+  .tariffa .ridotta .cifra-min{font-family:"Fraunces",serif;font-size:2rem;line-height:1;color:var(--blue-deep)}
+  .tariffa .ridotta .nota{flex-basis:100%;font-family:"Karla",sans-serif;font-size:.83rem;line-height:1.5;color:var(--ink-soft);margin-top:4px}
 
   .tariffe-coda{margin-top:32px;padding-top:20px;border-top:1px solid var(--line);color:var(--ink-soft);font-size:1.02rem}
 
@@ -250,6 +258,7 @@
     .form-card{padding:26px 22px}
     .tariffa{padding:26px 22px 24px}
     .tariffa .cifra{font-size:2.3rem}
+    .tariffa .ridotta{margin:22px -22px -24px;padding:16px 22px 18px}
   }
 </style>
 
