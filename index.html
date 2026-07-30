@@ -270,7 +270,11 @@
     .pblocks{grid-template-columns:1fr;gap:26px}
     .contact-grid{grid-template-columns:1fr;gap:30px}
     .menu{display:none}
-    .nav-cta{font-size:.85rem;padding:9px 17px}
+    /* senza il menu centrale la griglia schiaccia marchio e bottone: passo a flex */
+    header.nav{display:flex;justify-content:space-between;gap:16px;padding-left:20px;padding-right:20px}
+    .brand{flex:0 1 auto;min-width:0}
+    .brand span{white-space:nowrap}
+    .nav-cta{flex:none;font-size:.85rem;padding:9px 17px}
     .signature{font-size:2.3rem}
   }
   @media (max-width:560px){
@@ -283,9 +287,10 @@
     .tariffa .ridotta{margin:22px -22px -24px;padding:16px 22px 18px}
     /* colonna troppo stretta: la giustificazione creerebbe buchi */
     .quoteband blockquote{text-align:center;hyphens:none;-webkit-hyphens:none}
-    .brand{font-size:1.05rem;gap:8px}
-    .brand .logo-mark{width:26px;height:26px}
-    .nav-cta{font-size:.82rem;padding:8px 15px}
+    header.nav{gap:12px;padding-left:18px;padding-right:18px}
+    .brand{font-size:1rem;gap:7px}
+    .brand .logo-mark{width:25px;height:25px}
+    .nav-cta{font-size:.8rem;padding:8px 14px}
   }
 </style>
 
