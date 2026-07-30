@@ -82,7 +82,15 @@
   .menu a::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--blue);transition:width .3s}
   .menu a:hover,.menu a.active{color:var(--ink)}
   .menu a.active::after,.menu a:hover::after{width:100%}
-  .nav-cta{font-family:"Karla",sans-serif;font-weight:600;font-size:.9rem;background:var(--accent);color:#fff;border-radius:40px;padding:10px 20px;transition:all .25s}
+
+  .nav-cta{
+    font-family:"Karla",sans-serif;font-weight:600;font-size:.9rem;
+    background:var(--accent);color:#fff;border-radius:40px;padding:10px 20px;
+    /* nascosto di default: compare solo quando il bottone dell'hero esce dal viewport */
+    opacity:0;visibility:hidden;transform:translateY(-6px);pointer-events:none;
+    transition:opacity .3s ease,transform .3s ease,visibility .3s,background .25s;
+  }
+  .nav-cta.show{opacity:1;visibility:visible;transform:none;pointer-events:auto}
   .nav-cta:hover{background:var(--accent-deep)}
 
   /* hero */
@@ -261,7 +269,8 @@
     .portrait svg{width:48px;height:48px;margin-bottom:8px}
     .pblocks{grid-template-columns:1fr;gap:26px}
     .contact-grid{grid-template-columns:1fr;gap:30px}
-    .menu,.nav-cta{display:none}
+    .menu{display:none}
+    .nav-cta{font-size:.85rem;padding:9px 17px}
     .signature{font-size:2.3rem}
   }
   @media (max-width:560px){
@@ -274,6 +283,9 @@
     .tariffa .ridotta{margin:22px -22px -24px;padding:16px 22px 18px}
     /* colonna troppo stretta: la giustificazione creerebbe buchi */
     .quoteband blockquote{text-align:center;hyphens:none;-webkit-hyphens:none}
+    .brand{font-size:1.05rem;gap:8px}
+    .brand .logo-mark{width:26px;height:26px}
+    .nav-cta{font-size:.82rem;padding:8px 15px}
   }
 </style>
 
@@ -471,6 +483,22 @@
   const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   requestAnimationFrame(()=>{const eb=document.getElementById('eyebrow');if(eb){eb.style.transition='opacity 1s ease .2s';eb.style.opacity=1;}});
+
+  // Il CTA in header compare solo quando il bottone "Scrivimi" dell'hero esce dal viewport
+  (function(){
+    const navCta = document.querySelector('.nav-cta');
+    const heroCta = document.querySelector('.hero-actions .btn-primary');
+    if(!navCta) return;
+    if(!heroCta || !('IntersectionObserver' in window)){ navCta.classList.add('show'); return; }
+
+    const ctaObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        navCta.classList.toggle('show', !e.isIntersecting);
+      });
+    }, { threshold:0, rootMargin:'-72px 0px 0px 0px' });
+
+    ctaObserver.observe(heroCta);
+  })();
 
   const links=[...document.querySelectorAll('.menu a')];
   const map=links.map(l=>({l,sec:document.querySelector(l.getAttribute('href'))})).filter(x=>x.sec);
