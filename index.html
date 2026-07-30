@@ -132,7 +132,20 @@
 
   /* quote */
   .quoteband{background:var(--paper-2);text-align:center}
-  .quoteband blockquote{font-family:"Fraunces",serif;font-style:italic;font-weight:300;font-size:clamp(1.4rem,3.2vw,2rem);line-height:1.45;max-width:28ch;margin:0 auto;color:var(--ink)}
+  .quoteband blockquote{
+    font-family:"Fraunces",serif;
+    font-style:italic;
+    font-weight:300;
+    font-size:clamp(1.4rem,3.2vw,2rem);
+    line-height:1.45;
+    max-width:34ch;
+    margin:0 auto;
+    color:var(--ink);
+    text-align:justify;
+    text-align-last:center;
+    hyphens:auto;
+    -webkit-hyphens:auto;
+  }
   .quoteband .kicker{display:block;margin-bottom:24px}
   .quoteband cite{display:block;margin-top:22px;font-style:normal;font-family:"Karla",sans-serif;font-size:.84rem;letter-spacing:.05em;color:var(--blue-deep)}
 
@@ -259,6 +272,8 @@
     .tariffa{padding:26px 22px 24px}
     .tariffa .cifra{font-size:2.3rem}
     .tariffa .ridotta{margin:22px -22px -24px;padding:16px 22px 18px}
+    /* colonna troppo stretta: la giustificazione creerebbe buchi */
+    .quoteband blockquote{text-align:center;hyphens:none;-webkit-hyphens:none}
   }
 </style>
 
