@@ -26,6 +26,11 @@
     --line:#d4dde2;
     --shadow:rgba(34,50,61,.16);
     --maxw:1080px;
+
+    /* misure di riga — una sola scala per tutta la pagina */
+    --measure:60ch;          /* testo corrente e occhielli di sezione */
+    --measure-lead:46ch;     /* frasi guida centrate (hero, contatti) */
+    --measure-quote:34ch;    /* citazione: volutamente più stretta */
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -99,7 +104,7 @@
   .hero-copy{max-width:780px}
   .hero .kicker{display:block;margin-bottom:22px;opacity:0}
   .hero h1{font-size:clamp(2.4rem,6vw,4rem);margin-bottom:24px}
-  .hero .lead{font-size:1.22rem;color:var(--ink-soft);max-width:46ch;margin:0 auto 34px}
+  .hero .lead{font-size:1.22rem;color:var(--ink-soft);max-width:var(--measure-lead);margin:0 auto 34px;text-wrap:balance}
   .hero-actions{display:flex;gap:24px;align-items:center;flex-wrap:wrap;justify-content:center}
   .btn{font-family:"Karla",sans-serif;font-weight:600;font-size:.98rem;padding:15px 30px;border-radius:44px;cursor:pointer;transition:all .25s;display:inline-flex;align-items:center;gap:9px;border:1.5px solid transparent}
   .btn-primary{background:var(--accent);color:#fff}
@@ -134,7 +139,7 @@
   .letter{font-size:1.2rem;line-height:1.9}
   .letter .kicker{margin-bottom:26px;display:block}
   .letter h2{font-size:clamp(1.9rem,4.4vw,2.7rem);margin-bottom:30px;max-width:18ch}
-  .letter p{margin-bottom:1.25em;color:var(--ink)}
+  .letter p{margin-bottom:1.25em;color:var(--ink);max-width:var(--measure)}
   .signature{font-family:"Caveat",cursive;font-weight:600;font-size:2.6rem;color:var(--blue);line-height:1;margin-top:.5em}
   .cred{font-family:"Karla",sans-serif;font-size:.86rem;color:var(--ink-soft);letter-spacing:.03em;margin-top:10px}
 
@@ -146,7 +151,7 @@
     font-weight:300;
     font-size:clamp(1.4rem,3.2vw,2rem);
     line-height:1.45;
-    max-width:34ch;
+    max-width:var(--measure-quote);
     margin:0 auto;
     color:var(--ink);
     text-align:justify;
@@ -159,15 +164,15 @@
 
   /* ambiti — quiet list, no badges/hover */
   .ambiti h2{font-size:clamp(1.9rem,4.4vw,2.7rem);margin-bottom:14px}
-  .ambiti .intro{color:var(--ink-soft);margin-bottom:36px;max-width:52ch}
+  .ambiti .intro{color:var(--ink-soft);margin-bottom:36px;max-width:var(--measure);text-wrap:balance}
   .ambiti-item{padding:24px 0;border-bottom:1px solid var(--line)}
   .ambiti-item:first-of-type{border-top:1px solid var(--line)}
   .ambiti-item h3{font-size:1.4rem;margin-bottom:4px}
-  .ambiti-item p{color:var(--ink-soft);font-size:1.06rem}
+  .ambiti-item p{color:var(--ink-soft);font-size:1.06rem;max-width:var(--measure)}
 
   /* servizi offerti */
   #servizi-offerti h2{font-size:clamp(1.9rem,4.4vw,2.7rem);margin-bottom:14px}
-  #servizi-offerti .intro{color:var(--ink-soft);margin-bottom:38px;max-width:80ch;text-wrap:balance}
+  #servizi-offerti .intro{color:var(--ink-soft);margin-bottom:38px;max-width:var(--measure);text-wrap:balance}
 
   .tariffe{display:grid;grid-template-columns:1fr;gap:22px;align-items:stretch}
   @media (min-width:921px){ .tariffe{grid-template-columns:repeat(3,1fr)} }
@@ -201,16 +206,17 @@
   .tariffa .ridotta .nota{flex-basis:100%;font-family:"Karla",sans-serif;font-size:.83rem;line-height:1.5;color:var(--ink-soft);margin-top:4px}
 
   .tariffe-coda{margin-top:32px;padding-top:20px;border-top:1px solid var(--line);color:var(--ink-soft);font-size:1.02rem}
+  .tariffe-coda span{display:block;max-width:var(--measure)}
 
   /* come funziona — understated steps */
   #come{background:var(--paper-2)}
   #come h2{font-size:clamp(1.9rem,4.4vw,2.7rem);margin-bottom:14px}
-  #come .intro{color:var(--ink-soft);margin-bottom:40px;max-width:52ch}
+  #come .intro{color:var(--ink-soft);margin-bottom:40px;max-width:var(--measure);text-wrap:balance}
   .flow-step{display:grid;grid-template-columns:auto 1fr;gap:22px;padding:22px 0;border-bottom:1px solid var(--line)}
   .flow-step:last-child{border-bottom:0}
   .flow-step .n{font-family:"Karla",sans-serif;font-weight:600;font-size:.85rem;color:var(--blue);border:1.5px solid var(--blue-soft);width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:none}
   .flow-step h3{font-size:1.22rem;margin-bottom:4px}
-  .flow-step p{color:var(--ink-soft);font-size:1.04rem}
+  .flow-step p{color:var(--ink-soft);font-size:1.04rem;max-width:var(--measure)}
 
   /* dove — plain blocks, centrati */
   .pblocks{display:flex;flex-wrap:wrap;justify-content:center;gap:34px 56px}
@@ -227,13 +233,13 @@
   .faq summary::-webkit-details-marker{display:none}
   .faq summary .pm{font-family:"Karla";color:var(--blue);font-size:1.6rem;transition:transform .3s;flex:none}
   .faq details[open] summary .pm{transform:rotate(45deg)}
-  .faq details p{color:var(--ink-soft);padding:0 0 24px;max-width:62ch}
+  .faq details p{color:var(--ink-soft);padding:0 0 24px;max-width:var(--measure)}
 
   /* contatti — colonna unica centrata */
   #contatti{background:var(--paper-2)}
   .contact-grid{max-width:520px;margin:0 auto;text-align:center}
   .contact-lead h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:18px}
-  .contact-lead p{color:var(--ink-soft);max-width:40ch;margin:0 auto 30px}
+  .contact-lead p{color:var(--ink-soft);max-width:var(--measure-lead);margin:0 auto 30px;text-wrap:balance}
   .channels{display:flex;flex-direction:column;gap:13px;max-width:420px;margin:0 auto;text-align:left}
   .channel{display:flex;align-items:center;gap:16px;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:17px 22px;transition:border-color .25s}
   .channel:hover{border-color:var(--accent)}
@@ -385,7 +391,7 @@
     </div>
 
     <p class="tariffe-coda reveal">
-      Ogni colloquio dura circa 50 minuti e si svolge su appuntamento. A seconda del tipo di colloquio e delle esigenze stabiliamo la cadenza degli incontri.
+      <span>Ogni colloquio dura circa 50 minuti e si svolge su appuntamento. A seconda del tipo di colloquio e delle esigenze stabiliamo la cadenza degli incontri.</span>
     </p>
 
   </div>
