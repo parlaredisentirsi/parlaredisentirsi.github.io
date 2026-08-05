@@ -26,6 +26,7 @@
     --line:#d4dde2;
     --shadow:rgba(34,50,61,.16);
     --maxw:1080px;
+    --wa:#25d366;            /* verde di marca WhatsApp */
 
     /* misure di riga — una sola scala per tutta la pagina */
     --measure:60ch;          /* testo corrente e occhielli di sezione */
@@ -244,6 +245,7 @@
   .channel{display:flex;align-items:center;gap:16px;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:17px 22px;transition:border-color .25s}
   .channel:hover{border-color:var(--accent)}
   .channel .ic{width:42px;height:42px;border-radius:11px;background:rgba(85,125,151,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-deep);flex:none}
+  .channel.wa .ic{color:var(--wa);background:rgba(37,211,102,.14)}
   .channel .lbl{font-family:"Karla",sans-serif;font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-deep)}
   .channel .val{font-size:1.06rem;color:var(--ink);word-break:break-word}
 
@@ -422,7 +424,7 @@
     <div class="pblocks">
       <div class="pblock reveal">
         <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-        <h3>In studio</h3><p>Genova, centro.</p>
+        <h3>In studio</h3><p>Genova, centro</p>
       </div>
       <div class="pblock reveal">
         <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
@@ -443,7 +445,7 @@
         <h2>Il primo passo</h2>
         <p>Il modo più semplice per cominciare è scrivermi.</p>
         <div class="channels">
-          <a class="channel" href="https://wa.me/393331234567" target="_blank" rel="noopener">
+          <a class="channel wa" href="https://wa.me/393331234567" target="_blank" rel="noopener">
             <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.65-4.5A8.5 8.5 0 1 1 7.5 19.4L3 21z"/><path d="M9 9.4c0 3.1 2.5 5.6 5.6 5.6.6 0 1-.4 1-1v-.9l-1.8-.8-.9 1a5.7 5.7 0 0 1-2.2-2.2l1-.9-.8-1.8H10c-.6 0-1 .4-1 1z"/></svg></span>
             <span><span class="lbl">WhatsApp</span><br><span class="val">+39 333 123 4567</span></span></a>
           <a class="channel" href="mailto:dott.ssadiorioangela@gmail.com">
