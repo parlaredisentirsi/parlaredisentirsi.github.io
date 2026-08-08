@@ -8,11 +8,60 @@
 <meta name="theme-color" content="#557d97">
 <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..400&family=Karla:wght@400;500;600&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
-
 <style>
+  /* ============================================================
+     FONT OSPITATI IN LOCALE
+     Nessuna chiamata a fonts.googleapis.com / fonts.gstatic.com:
+     il browser del visitatore non contatta più server di terzi.
+     I file .woff2 vanno messi nella cartella /fonts con questi nomi.
+     ============================================================ */
+
+  @font-face{
+    font-family:'Fraunces';
+    src:url('/fonts/fraunces-variable.woff2') format('woff2');
+    font-weight:300 600;
+    font-style:normal;
+    font-display:swap;
+  }
+  @font-face{
+    font-family:'Fraunces';
+    src:url('/fonts/fraunces-variable-italic.woff2') format('woff2');
+    font-weight:300 600;
+    font-style:italic;
+    font-display:swap;
+  }
+
+  @font-face{
+    font-family:'Newsreader';
+    src:url('/fonts/newsreader-variable.woff2') format('woff2');
+    font-weight:300 500;
+    font-style:normal;
+    font-display:swap;
+  }
+  @font-face{
+    font-family:'Newsreader';
+    src:url('/fonts/newsreader-variable-italic.woff2') format('woff2');
+    font-weight:300 500;
+    font-style:italic;
+    font-display:swap;
+  }
+
+  @font-face{
+    font-family:'Karla';
+    src:url('/fonts/karla-variable.woff2') format('woff2');
+    font-weight:400 600;
+    font-style:normal;
+    font-display:swap;
+  }
+
+  @font-face{
+    font-family:'Caveat';
+    src:url('/fonts/caveat-variable.woff2') format('woff2');
+    font-weight:500 600;
+    font-style:normal;
+    font-display:swap;
+  }
+
   :root{
     --paper:#f4f1ea;
     --paper-2:#e6edf1;
@@ -37,16 +86,16 @@
   html{scroll-behavior:smooth}
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
 
-  body{background:var(--paper);color:var(--ink);font-family:"Newsreader",Georgia,serif;font-size:1.1rem;line-height:1.75;font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  body{background:var(--paper);color:var(--ink);font-family:"Newsreader",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.75;font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.5;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");mix-blend-mode:multiply}
 
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;z-index:2}
   .narrow{max-width:640px}
-  h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:400;line-height:1.12;letter-spacing:-.01em}
+  h1,h2,h3{font-family:"Fraunces",Georgia,"Times New Roman",serif;font-weight:400;line-height:1.12;letter-spacing:-.01em}
   a{color:inherit;text-decoration:none}
   .hl{font-style:italic;color:var(--blue)}
-  .kicker{font-family:"Karla",sans-serif;font-weight:600;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--blue-deep)}
+  .kicker{font-family:"Karla",system-ui,-apple-system,"Segoe UI",sans-serif;font-weight:600;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--blue-deep)}
   /* editor placeholders — easy to spot, easy to delete */
   .ed{background:rgba(85,125,151,.12);border-radius:4px;padding:.05em .35em;font-style:italic;color:var(--blue-deep)}
 
@@ -80,17 +129,17 @@
   justify-self:end;
 }
   header.nav.scrolled{background:rgba(244,241,234,.86);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line);padding-top:12px;padding-bottom:12px}
-  .brand{display:flex;align-items:center;gap:10px;font-family:"Fraunces",serif;font-size:1.24rem;font-weight:500;letter-spacing:-.02em;color:var(--ink)}
+  .brand{display:flex;align-items:center;gap:10px;font-family:"Fraunces",Georgia,serif;font-size:1.24rem;font-weight:500;letter-spacing:-.02em;color:var(--ink)}
   .brand .logo-mark{width:30px;height:30px;color:var(--blue);flex:none}
   .brand .s{color:var(--blue)}
-  .menu{display:flex;gap:28px;align-items:center;font-family:"Karla",sans-serif;font-size:.92rem;font-weight:500}
+  .menu{display:flex;gap:28px;align-items:center;font-family:"Karla",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:.92rem;font-weight:500}
   .menu a{position:relative;color:var(--ink-soft);transition:color .25s}
   .menu a::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--blue);transition:width .3s}
   .menu a:hover,.menu a.active{color:var(--ink)}
   .menu a.active::after,.menu a:hover::after{width:100%}
 
   .nav-cta{
-    font-family:"Karla",sans-serif;font-weight:600;font-size:.9rem;
+    font-family:"Karla",system-ui,-apple-system,"Segoe UI",sans-serif;font-weight:600;font-size:.9rem;
     background:var(--accent);color:#fff;border-radius:40px;padding:10px 20px;
     /* nascosto di default: compare solo quando il bottone dell'hero esce dal viewport */
     opacity:0;visibility:hidden;transform:translateY(-6px);pointer-events:none;
@@ -107,10 +156,10 @@
   .hero h1{font-size:clamp(2.4rem,6vw,4rem);margin-bottom:24px}
   .hero .lead{font-size:1.22rem;color:var(--ink-soft);max-width:var(--measure-lead);margin:0 auto 34px;text-wrap:balance}
   .hero-actions{display:flex;gap:24px;align-items:center;flex-wrap:wrap;justify-content:center}
-  .btn{font-family:"Karla",sans-serif;font-weight:600;font-size:.98rem;padding:15px 30px;border-radius:44px;cursor:pointer;transition:all .25s;display:inline-flex;align-items:center;gap:9px;border:1.5px solid transparent}
+  .btn{font-family:"Karla",system-ui,-apple-system,"Segoe UI",sans-serif;font-weight:600;font-size:.98rem;padding:15px 30px;border-radius:44px;cursor:pointer;transition:all .25s;display:inline-flex;align-items:center;gap:9px;border:1.5px solid transparent}
   .btn-primary{background:var(--accent);color:#fff}
   .btn-primary:hover{background:var(--accent-deep)}
-  .textlink{font-family:"Karla",sans-serif;font-weight:500;font-size:.98rem;color:var(--ink-soft);border-bottom:1px solid var(--line);padding-bottom:2px}
+  .textlink{font-family:"Karla",system-ui,-apple-system,"Segoe UI",sans-serif;font-weight:500;font-size:.98rem;color:var(--ink-soft);border-bottom:1px solid var(--line);padding-bottom:2px}
   .textlink:hover{color:var(--ink);border-color:var(--ink)}
 
   /* changed only this shape */
@@ -128,7 +177,7 @@
     text-align:center;
   }
   .portrait::after{content:"";position:absolute;inset:0;border:1px solid rgba(255,255,255,.5);border-radius:inherit}
-  .portrait .ph{font-family:"Karla",sans-serif;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-deep);padding:0 26px}
+  .portrait .ph{font-family:"Karla",system-ui,sans-serif;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-deep);padding:0 26px}
   .portrait svg{width:74px;height:74px;opacity:.55;margin-bottom:14px}
   .portrait img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
 
@@ -142,12 +191,12 @@
   .letter h2{font-size:clamp(1.9rem,4.4vw,2.7rem);margin-bottom:30px;max-width:18ch}
   .letter p{margin-bottom:1.25em;color:var(--ink);max-width:var(--measure)}
   .signature{font-family:"Caveat",cursive;font-weight:600;font-size:2.6rem;color:var(--blue);line-height:1;margin-top:.5em}
-  .cred{font-family:"Karla",sans-serif;font-size:.86rem;color:var(--ink-soft);letter-spacing:.03em;margin-top:10px}
+  .cred{font-family:"Karla",system-ui,sans-serif;font-size:.86rem;color:var(--ink-soft);letter-spacing:.03em;margin-top:10px}
 
   /* quote */
   .quoteband{background:var(--paper-2);text-align:center}
   .quoteband blockquote{
-    font-family:"Fraunces",serif;
+    font-family:"Fraunces",Georgia,serif;
     font-style:italic;
     font-weight:300;
     font-size:clamp(1.4rem,3.2vw,2rem);
@@ -161,7 +210,7 @@
     -webkit-hyphens:auto;
   }
   .quoteband .kicker{display:block;margin-bottom:24px}
-  .quoteband cite{display:block;margin-top:22px;font-style:normal;font-family:"Karla",sans-serif;font-size:.84rem;letter-spacing:.05em;color:var(--blue-deep)}
+  .quoteband cite{display:block;margin-top:22px;font-style:normal;font-family:"Karla",system-ui,sans-serif;font-size:.84rem;letter-spacing:.05em;color:var(--blue-deep)}
 
   /* ambiti — quiet list, no badges/hover */
   .ambiti h2{font-size:clamp(1.9rem,4.4vw,2.7rem);margin-bottom:14px}
@@ -188,10 +237,10 @@
   .tariffa h3{font-size:1.3rem;margin-bottom:10px}
   .tariffa .desc{color:var(--ink-soft);font-size:1.02rem;line-height:1.7}
 
-  .tariffa .prezzo{margin-top:auto;padding-top:24px;display:flex;align-items:baseline;gap:5px;font-family:"Fraunces",serif;color:var(--blue)}
+  .tariffa .prezzo{margin-top:auto;padding-top:24px;display:flex;align-items:baseline;gap:5px;font-family:"Fraunces",Georgia,serif;color:var(--blue)}
   .tariffa .valuta{font-size:1.2rem}
   .tariffa .cifra{font-size:2.6rem;line-height:1;letter-spacing:-.02em}
-  .tariffa .unita{font-family:"Karla",sans-serif;font-size:.82rem;color:var(--ink-soft);margin-left:7px}
+  .tariffa .unita{font-family:"Karla",system-ui,sans-serif;font-size:.82rem;color:var(--ink-soft);margin-left:7px}
 
   /* fascia tariffa giovani adulti */
   .tariffa .ridotta{
@@ -202,9 +251,9 @@
     border-radius:0 0 19px 19px;          /* 20px del bordo meno 1px */
     display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap;
   }
-  .tariffa .ridotta .lbl{font-family:"Karla",sans-serif;font-weight:600;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-deep)}
-  .tariffa .ridotta .cifra-min{font-family:"Fraunces",serif;font-size:2rem;line-height:1;color:var(--blue-deep)}
-  .tariffa .ridotta .nota{flex-basis:100%;font-family:"Karla",sans-serif;font-size:.83rem;line-height:1.5;color:var(--ink-soft);margin-top:4px}
+  .tariffa .ridotta .lbl{font-family:"Karla",system-ui,sans-serif;font-weight:600;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-deep)}
+  .tariffa .ridotta .cifra-min{font-family:"Fraunces",Georgia,serif;font-size:2rem;line-height:1;color:var(--blue-deep)}
+  .tariffa .ridotta .nota{flex-basis:100%;font-family:"Karla",system-ui,sans-serif;font-size:.83rem;line-height:1.5;color:var(--ink-soft);margin-top:4px}
 
   .tariffe-coda{margin-top:32px;padding-top:20px;border-top:1px solid var(--line);color:var(--ink-soft);font-size:1.02rem}
   .tariffe-coda span{display:block;max-width:var(--measure)}
@@ -215,7 +264,7 @@
   #come .intro{color:var(--ink-soft);margin-bottom:40px;max-width:var(--measure);text-wrap:balance}
   .flow-step{display:grid;grid-template-columns:auto 1fr;gap:22px;padding:22px 0;border-bottom:1px solid var(--line)}
   .flow-step:last-child{border-bottom:0}
-  .flow-step .n{font-family:"Karla",sans-serif;font-weight:600;font-size:.85rem;color:var(--blue);border:1.5px solid var(--blue-soft);width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:none}
+  .flow-step .n{font-family:"Karla",system-ui,sans-serif;font-weight:600;font-size:.85rem;color:var(--blue);border:1.5px solid var(--blue-soft);width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:none}
   .flow-step h3{font-size:1.22rem;margin-bottom:4px}
   .flow-step p{color:var(--ink-soft);font-size:1.04rem;max-width:var(--measure)}
 
@@ -230,9 +279,9 @@
   /* faq */
   .faq h2{font-size:clamp(1.9rem,4.4vw,2.7rem);margin-bottom:18px}
   .faq details{border-bottom:1px solid var(--line)}
-  .faq summary{cursor:pointer;list-style:none;padding:22px 0;font-family:"Fraunces",serif;font-size:1.28rem;display:flex;justify-content:space-between;align-items:center;gap:20px}
+  .faq summary{cursor:pointer;list-style:none;padding:22px 0;font-family:"Fraunces",Georgia,serif;font-size:1.28rem;display:flex;justify-content:space-between;align-items:center;gap:20px}
   .faq summary::-webkit-details-marker{display:none}
-  .faq summary .pm{font-family:"Karla";color:var(--blue);font-size:1.6rem;transition:transform .3s;flex:none}
+  .faq summary .pm{font-family:"Karla",system-ui,sans-serif;color:var(--blue);font-size:1.6rem;transition:transform .3s;flex:none}
   .faq details[open] summary .pm{transform:rotate(45deg)}
   .faq details p{color:var(--ink-soft);padding:0 0 24px;max-width:var(--measure)}
 
@@ -246,13 +295,15 @@
   .channel:hover{border-color:var(--accent)}
   .channel .ic{width:42px;height:42px;border-radius:11px;background:rgba(85,125,151,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-deep);flex:none}
   .channel.wa .ic{color:var(--wa);background:rgba(37,211,102,.14)}
-  .channel .lbl{font-family:"Karla",sans-serif;font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-deep)}
+  .channel .lbl{font-family:"Karla",system-ui,sans-serif;font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-deep)}
   .channel .val{font-size:1.06rem;color:var(--ink);word-break:break-word}
 
   footer{padding:48px 0;text-align:center}
   footer .brand{justify-content:center;font-size:1.3rem;margin-bottom:10px}
-  footer p{font-family:"Karla",sans-serif;font-size:.84rem;color:var(--ink-soft);line-height:1.9}
+  footer p{font-family:"Karla",system-ui,sans-serif;font-size:.84rem;color:var(--ink-soft);line-height:1.9}
   footer .fine{margin-top:16px;color:var(--blue-deep);font-size:.78rem}
+  footer .fine a{border-bottom:1px solid var(--blue-soft)}
+  footer .fine a:hover{color:var(--ink)}
 
   .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
   .reveal.in{opacity:1;transform:none}
@@ -467,7 +518,7 @@
       <span>parlaredi<span class="s">sentirsi</span></span>
     </a>
     <p>Angela D'Iorio — Psicologa · Genova</p>
-    <p class="fine">© <span id="year"></span> · P.IVA 04966630610 · Iscr. Albo A n. 10400 · Privacy policy</p>
+    <p class="fine">© <span id="year"></span> · P.IVA 04966630610 · Iscr. Albo A n. 10400 · <a href="/privacy.html">Privacy policy</a></p>
   </div>
 </footer>
 
